@@ -1,0 +1,11 @@
+services:
+  chat:
+    build: .
+    network_mode: host
+    stdin_open: true
+    tty: true
+    volumes:
+      - ollama-chat-data:/app/data
+
+volumes:
+  ollama-chat-data:
